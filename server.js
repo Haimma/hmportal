@@ -12,12 +12,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true})); // was false
 
 const db = firebase.initializeApp({
-    apiKey: "AIzaSyDByLhn3FE1C4ykRqzQFkrkt4xhUwxWNCc",
-    authDomain: "hmportal-dfbb8.firebaseapp.com",
-    databaseURL: "https://hmportal-dfbb8.firebaseio.com",
-    projectId: "hmportal-dfbb8",
-    storageBucket: "hmportal-dfbb8.appspot.com",
-    messagingSenderId: "810481067789"
+
   });
 
 app.use((req, res, next) => {
@@ -33,10 +28,10 @@ app.use((req, res, next) => {
     next();
   }); // midleware
   
-const _GETNEWS_URL = 'https://newsapi.org/v2/top-headlines?sources=ynet&apiKey=9fab3a0a90a641509375461c52bbbf47';
-const _GETWEATHER_URL = 'http://api.openweathermap.org/data/2.5/weather?q=Beersheba,il&units=metric&APPID=338db02ba55a0472c6b91ee0139ea043';
-const _GETALLWEATHER_URL = 'http://api.openweathermap.org/data/2.5/forecast?id=295530&units=metric&APPID=338db02ba55a0472c6b91ee0139ea043';
-const _GETSCORES_URL = 'https://cors-anywhere.herokuapp.com/http://livescore-api.com/api-client/scores/live.json?key=0PYOGKM3vLhbtMiN&secret=pGUCbW5JtzZmsLCtAAhgl3kRPB2jnk6N';
+const _GETNEWS_URL = 'https://newsapi.org/v2/top-headlines';
+const _GETWEATHER_URL = 'http://api.openweathermap.org/data/2.5/w';
+const _GETALLWEATHER_URL = 'http://api.openweathermap.org/data/2.5/';
+const _GETSCORES_URL = 'https://cors-anywhere.herokuapp.com/http://livescore-api.com/api-client/';
 
 app.get("/api/getNews",  (req, res) => {
     request(_GETNEWS_URL, (error, response, body) => {

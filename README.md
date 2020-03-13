@@ -3,7 +3,7 @@
 project with reactJS (toasts/restAPI) nodeJs (express) and firebase.
 real time screan with weather + finance graph + football game score + subscribe + news.
 
-to ran this project:
+to run this project:
 run npm install  the main folder
 goto client folder
 run npm install again
